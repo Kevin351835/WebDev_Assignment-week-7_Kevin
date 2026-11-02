@@ -1,82 +1,60 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>about</title>
-    @vite('resources/css/app.css')
-</head>
-<body>
-<nav
-   class="flex py-2 px-4 md:px-4 bg-white border-b border-slate-300 dark:border-neutral-700 dark:bg-neutral-900 min-h-[50px] relative z-20"
-   aria-label="Main navigation">
-   <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 w-full">
-      <a href="#"
-         class="min-w-9 inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
-         <span class="sr-only"></span>
-      </a>
+@extends('layout.app')
 
-      <div id="collapseMenu" tabindex="-1"
-         class="hidden lg:block max-lg:bg-white dark:max-lg:bg-neutral-900 max-lg:border-l max-lg:border-slate-300 dark:max-lg:border-neutral-700 max-lg:w-1/2 max-lg:fixed max-lg:top-0 max-lg:right-0 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto max-sm:w-full z-50 outline-none">
+@section('title', 'About | Kevin Stello')
 
-         <div
-            class="py-2 px-4 flex justify-between items-center border-b border-slate-300 sticky top-0 bg-white dark:border-neutral-700 dark:bg-neutral-900 lg:hidden max-lg:min-h-[68px]">
-            <a href="#"
-               class="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
-               <span class="sr-only">Halaman menu</span>
-               <img src="https://readymadeui.com/logo-alt.svg" alt="readymadeui logo dialog" class="h-9 w-auto" />
-            </a>
-         </div>
+@section('content')
+<div class="site-main">
+    <div class="about-hero">
+        <h1 class="about-title">Tentang <span class="gradient-text">Saya</span></h1>
+        <p class="about-lead">
+            Kenali lebih dekat latar belakang dan perjalanan akademik saya.
+        </p>
+    </div>
 
-         <ul class="flex flex-col gap-8 font-semibold text-sm text-slate-900 dark:text-slate-50 lg:flex-row max-lg:p-6">
-            <li>
-               <a href="/"
-                  class="hover:text-blue-700 dark:hover:text-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">home</a>
-            </li>
-            <li>
-               <a href="/about"
-                  class="hover:text-blue-700 dark:hover:text-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded"
-                  >about</a>
-            </li>
-            <li>
-               <a href="/blog"
-                  class="hover:text-blue-700 dark:hover:text-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">blog</a>
-            </li>
-            <li>
-               <a href="/contact"
-                  class="hover:text-blue-700 dark:hover:text-blue-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">contact</a>
-            </li>
-         </ul>
-      </div>
+    <div class="about-grid">
 
-      <div class="flex items-center gap-4">
-         <a href="#"
-            class="py-2 px-3.5 text-sm rounded-md font-semibold cursor-pointer transition-all focus:outline-none focus-visible:ring-2"></a>
+        <div class="info-card p-8">
+            <div class="border-b border-slate-800 pb-4 mb-6">
+                <h2 class="info-title text-xl font-bold">Informasi Pribadi</h2>
+            </div>
 
+            <div class="space-y-4 text-sm md:text-base">
+                <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                    <span class="text-slate-400 font-medium">Nama</span>
+                    <span class="font-semibold text-slate-200">Kevin</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                    <span class="text-slate-400 font-medium">Domisili</span>
+                    <span class="font-semibold text-slate-200">Makassar</span>
+                </div>
+                <div class="flex justify-between items-center py-2 border-b border-slate-800/50">
+                    <span class="text-slate-400 font-medium">Angkatan</span>
+                    <span class="rounded-full bg-blue-500/10 px-3 py-1 font-semibold text-blue-400 text-xs">2025</span>
+                </div>
+                <div class="flex justify-between items-center py-2">
+                    <span class="text-slate-400 font-medium">Jurusan</span>
+                    <span class="rounded-full bg-violet-500/10 px-3 py-1 font-semibold text-violet-400 text-xs">Informatika-AI</span>
+                </div>
+            </div>
+        </div>
 
-         <button type="button" aria-controls="collapseMenu" aria-expanded="false" aria-haspopup="true" id="toggleOpen"
-            class="cursor-pointer lg:hidden focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded">
-            <svg class="size-7 fill-slate-900 dark:fill-slate-50" aria-hidden="true" viewBox="0 0 20 20"
-               xmlns="http://www.w3.org/2000/svg">
-               <path fill-rule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clip-rule="evenodd"></path>
-            </svg>
-         </button>
-      </div>
-   </div>
-</nav>
+        <div class="info-card p-8">
+            <div class="border-b border-slate-800 pb-4 mb-6">
+                <h2 class="info-title text-xl font-bold">Pendidikan</h2>
+            </div>
 
-<main class="max-w-7xl mx-auto px-6 py-6 space-y-6">
-        <h1 class="text-3xl font-bold">ABOUT</h1>
-<div>
-  <h2 class="text-xl font-semibold">Nama : {{ $nama }}</h2>
-  <h2 class="text-xl font-semibold">Domisili : {{ $domisili }}</h2>
-  <h2 class="text-xl font-semibold">Asal SMP : {{ $SMP }}</h2>
-  <h2 class="text-xl font-semibold">Asal SMA : {{ $SMA }}</h2>
-  <h2 class="text-xl font-semibold">Angkatan : {{ $angkatan }}</h2>
-  <h2 class="text-xl font-semibold">Jurusan : {{ $jurusan }}</h2>
+            <div class="space-y-6 text-sm md:text-base">
+                <div class="relative pl-6 border-l-2 border-blue-500/40">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-blue-400">Sekolah Menengah Pertama</span>
+                    <h3 class="mt-1 font-bold text-slate-200 text-base">SMP Negeri 1 Towuti</h3>
+                </div>
+                <div class="relative pl-6 border-l-2 border-violet-500/40">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-violet-400">Sekolah Menengah Atas</span>
+                    <h3 class="mt-1 font-bold text-slate-200 text-base">SMA Katolik Makale</h3>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
-</main>
-</body>
-</html>
+@endsection
